@@ -23,7 +23,7 @@ export default class List extends React.Component {
             <div className="list">
                 <h3 className="listTitle">{listTitle}</h3>
                 {cardList}
-                <form onSubmit={onAddSubmit} className="elFormo">
+                <form onSubmit={onAddSubmit} className="elFormo" id="formId">
                     <input type="text" onChange={onAddInputChanged}  />
                                        
                     <button type="submit">Click Me!</button>

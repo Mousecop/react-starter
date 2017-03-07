@@ -35,8 +35,8 @@ export default class ListContainer extends React.Component {
         }
         const newCards = [ ...this.state.cards, newCard ];
         this.setState({ cards: newCards });
-
-        console.log("I was clicked!");
+        // const form = document.getElementsByClassName('elFormo');
+        // form.reset();
     }
     
     onAddInputChanged(e){
