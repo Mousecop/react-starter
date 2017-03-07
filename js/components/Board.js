@@ -15,7 +15,7 @@ export default class Board extends React.Component {
     
         return (
             <div className="board">
-            <h3 className="boardTitle">{this.props.boardTitle}</h3>
+                <h3 className="boardTitle">{this.props.boardTitle}</h3>
                 {boardList}
             </div>
         );
