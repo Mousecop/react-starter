@@ -1,30 +1,23 @@
 import React from 'react'
-import List from './List'
+
+import ListContainer from './list-container'
 
 export default class Board extends React.Component {
     constructor(props){
         super(props);
     }
     
-    onAddInputChanged() {
-        console.log("Input Changed");
-    }
-    onAddSubmit() {
-        console.log("I was clicked!");
-    }
-
     render() {
         const boardList = [];
-        for(let i=0; i<3; i++) {
-            boardList.push(<List listTitle={`Title of list ${i+1}`} onChange={this.onAddInputChanged} onMySubmit={this.onAddSubmit}/>);
+        for(let i=0; i<2; i++) {
+            boardList.push(<ListContainer listTitle={`Title of list ${i+1}`} />);
         }
-    const props = this.props;
-    return (
-        <div className="board">
-        <h3 className="boardTitle">{props.boardTitle}</h3>
-            {boardList}
-        </div>
-    );
-    }
     
+        return (
+            <div className="board">
+            <h3 className="boardTitle">{this.props.boardTitle}</h3>
+                {boardList}
+            </div>
+        );
+    }
 }
